@@ -3,6 +3,13 @@ import { NgModule } from '@angular/core';
 import {MatCardModule, MatChipsModule, MatToolbarModule, MatTableModule} from '@angular/material'
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+} from '@angular/animations';
 
 @NgModule({
   declarations: [

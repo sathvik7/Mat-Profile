@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { trigger, style, transition, animate, state } from '@angular/animations';
 
 
 export interface PeriodicElement {
@@ -23,7 +24,25 @@ const ELEMENT_DATA: PeriodicElement[] = [
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations:[
+    trigger('flyInOut', [
+      state('true', style({ transform: 'translateX(0%)' })),
+      state('false', style({ transform: 'translateX(0%)' })),
+      transition(':enter', [
+        style({ transform: 'translateX(100%)' }),
+        animate('800ms')
+      ])
+    ]),
+    trigger('flyRight', [
+      state('true', style({ transform: 'translateX(0%)' })),
+      state('false', style({ transform: 'translateX(0%)' })),
+      transition(':enter', [
+        style({ transform: 'translateX(-100%)' }),
+        animate('800ms')
+      ])
+    ])
+  ]
 })
 export class AppComponent {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];

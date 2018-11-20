@@ -1,8 +1,22 @@
 
-table{
-    width: 100%;
-}
-
 .centerAlign{
     margin-left: 40%;
+}
+.matAlign{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+}
+th.mat-header-cell{
+    text-align: center;
+    background-color: #673ab7;
+    -webkit-text-fill-color: white;
+    border-radius: 3px;
+}
+td.mat-cell{
+    background-color: rgb(255, 255, 255);
+}
+mat-card{
+    overflow-x: hidden
 }
